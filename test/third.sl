@@ -1,42 +1,3 @@
-# small-lisp
-> A Small Lisp REPL fully written in Haskell (It is possible to run mostly anything in this interpreter, but some bugs are yet to be fixed).
-
-### Documentation
-You can find the EBNF and much more on __Small Lisp__ [here](http://www.cs.sfu.ca/~cameron/Teaching/384/chap2.ps).
-
-### How to get started
-Simply run: `ghc sl.hs interpreter.hs parser.hs tokenizer.hs unparser.hs`
-
-#### Running
-`./sl <filename>`
-
-##### Example
-`./sl test/third.sl`
-
-###### REPL will start
-```Lisp
-REPL> { x = plus[2; 3] : times[4; x] }
-20
-```
-
-_// Obs.: The REPL will not work if you do not pass a file as param._
-
-### Hello World
-###### hello.sl
-```Lisp
-hello-world[x] = cons[x;  (hello world)]
-```
-
-```
-./sl hello.sl
-REPL> hello-world["luiz"]
-(luiz hello world)
-```
-
-### Brainfuck Interpreter
-_// Please not that the BF interpreter is not yet full done once I do not have time at the moment_
-###### bf.sl
-```Lisp
 ;;;
 ;;; Brainfuck
 ;;;
@@ -101,4 +62,3 @@ bf[code; tape-size] = {
   arrCode = explode[code] :
   exec[arrCode; arrCode; 0; reset-tape[tape-size; ()]; ()]
 }
-```
