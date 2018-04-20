@@ -14,29 +14,29 @@ Simply run: `ghc sl.hs interpreter.hs parser.hs tokenizer.hs unparser.hs`
 `./sl test/third.sl`
 
 ###### REPL will start
-```Lisp
+```Haskell
 REPL> { x = plus[2; 3] : times[4; x] }
 20
 ```
 
-_// Obs.: The REPL will not work if you do not pass a file as param._
+_// Obs.: The REPL will not work if you do not pass at least one file as param._
 
 ### Hello World
 ###### hello.sl
-```Lisp
+```Haskell
 hello-world[x] = cons[x;  (hello world)]
 ```
 
-```
+```Haskell
 ./sl hello.sl
 REPL> hello-world["luiz"]
 (luiz hello world)
 ```
 
 ### Brainfuck Interpreter
-_// Please not that the BF interpreter is not yet full done once I do not have time at the moment_
+_// Please not that the BF interpreter is incomplete_
 ###### bf.sl
-```Lisp
+```Haskell
 ;;;
 ;;; Brainfuck
 ;;;
